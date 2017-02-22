@@ -1,0 +1,15 @@
+<section class="select-level-wrapper"
+        [ngClass]="{'leave-anim' : leaveAnim}">
+    <div class="container-fluid">
+        <section class="row">
+            <label>               
+                <h2>SELECT THE DIFFICULTY LEVEL</h2>
+            </label>
+            <ul class="level-list">
+                <li (click)="setLevel(4)">Easy (8 cards)</li>
+                <li (click)="setLevel(8)">Medium (16 cards)</li>
+                <li (click)="setLevel(16)">Hard (32 cards)</li>
+            </ul>
+        </section>            
+    </div>    
+</section>

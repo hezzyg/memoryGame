@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+.flip-container {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    margin-bottom:20px;
+    perspective: 1000px;    
+}
+	
+.flip-container.flipped .single-card {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {	
+	height: 100%;
+    width: 100%;
+}
+
+.flip-container .single-card {
+	transition: .7s;
+	transform-style: preserve-3d;
+	position: relative;
+    height: 100%;
+}
+
+.flip-container .single-card .front, .back {
+	backface-visibility: hidden;
+    border: 0.5vw solid #054754;
+    border-radius: 1vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    box-shadow: 2px 2px 10px #000;
+    box-shadow: -2px -2px 10px #000;
+}
+
+.flip-container .single-card .front {
+	z-index: 2;
+	transform: rotateY(0deg);
+    background-color: #02c8a7;
+    background: repeating-linear-gradient(
+        45deg,
+        #02c8a7,
+        #02c8a7 20px,
+        #039980 20px,
+        #039980 40px
+    );
+}
+
+.flip-container .single-card .back {
+	transform: rotateY(180deg);
+    background-color: #F9BE02;
+    font-family: 'Lobster', cursive;    
+    text-align: center;
+    overflow: hidden;   
+}
+
+.flip-container .single-card .back > p {    
+    font-size: 20vw;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+}

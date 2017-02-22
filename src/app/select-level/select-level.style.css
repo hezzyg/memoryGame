@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin);
+.select-level-wrapper {
+    background-color: #F9BE02;
+    
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+    min-width: 50vw;
+    min-height: 50vh;
+    text-align: center;
+
+    border: 10px solid #f63341;
+    border-radius: 20px;
+    box-shadow: 0px 70px 150px #047065;
+    
+    animation: welcomeAnim;
+    animation-duration: .7s;    
+}
+
+@media screen and (max-width: 768px) { 
+    .select-level-wrapper {
+        width: 80%;
+        min-height: 40vh;
+    }
+}
+
+@keyframes welcomeAnim {
+    0% {left: -1000px; opacity: 0;}
+	80% {left: 57%; opacity: 0.7;}
+    90% {left: 55%; opacity: 0.9;}
+	100% {left: 50%; opacity: 1;}
+}
+
+.select-level-wrapper.leave-anim {
+    left: 205%;
+    animation: leaveAnim;
+    animation-duration: 2s;
+}
+
+@keyframes leaveAnim {
+    0% {left: 50%}
+    99% {left: 205%}
+    100% {opacity: 0;}
+}
+
+.select-level-wrapper h2 {
+    margin-top: 6vh;
+    font-size: 4vw;
+}
+
+.select-level-wrapper .level-list {
+    list-style: none;
+    margin: 1vh auto;
+    padding:0;
+    width: 50%;
+}
+
+.select-level-wrapper .level-list > li {
+    cursor: pointer;
+    margin: 1vh 0px;
+    font-size: 3vw;
+    line-height: 1.5em;
+    font-weight: bold;
+    text-shadow: 0px 1px 15px #fff;
+}
+
+.select-level-wrapper .level-list > li:hover{   
+    border-radius: 10px;
+    background-color: #f4cf5f;
+}
+
+@media screen and (max-width: 500px) { 
+    .select-level-wrapper h2 {
+        font-size: 5vw;        
+    }
+
+    .select-level-wrapper .level-list > li {
+        font-size: 5.5vw;
+    }
+    
+}

@@ -1,0 +1,143 @@
+.pb-wrapper {         
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    text-align: center;
+}
+
+.pb-wrapper h1 {
+    margin: 1vh auto;
+    color: #f63341;
+    font-size: 4vw;
+    font-weight: bold;
+    padding: 1vh;
+    display: inline;
+}
+
+.pb-wrapper .pairs-count {
+    display: inline-block;
+    font-size: 3.7vw;
+    padding-left: 2vw;
+    margin:0;
+}
+
+@media screen and (max-width: 760px) { 
+    .pb-wrapper h1 {
+        font-size: 4vw;
+    }
+
+    .pb-wrapper .pairs-count {
+        left: unset;
+        position: unset;
+        font-size: 4vw;        
+    }
+}
+
+.pb-wrapper .board {
+    margin: 2vh auto;
+    width: 80%;
+}
+
+.pb-wrapper .card-space {
+    width: 25%;
+    float:left;
+    margin: 0 auto;
+    padding: 0px 2% 2%;
+}
+
+.pb-wrapper .finish-msg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60vw;
+    height: 50vh;
+    display: none;
+
+    border: 2vh solid #f63341;
+    border-radius: 4vh;
+    background-color: #054754;
+    padding: 20px;
+
+    box-shadow: 0px 0px 15vh #054754;
+
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    animation: finishMsgAnim;
+    animation-duration: .5s;
+}
+
+@keyframes finishMsgAnim {
+   0% {width: 10vw; height: 10vh;}
+   80% {width: 75vw; height: 65vh;}
+   100% {width: 60vw; height: 50vh;}
+}
+
+@media screen and (max-width: 992px) { 
+    .pb-wrapper .finish-msg {
+        height: 35vh;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    .pb-wrapper .finish-msg {
+        height: 28vh;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .pb-wrapper .finish-msg {
+        height: 18vh;
+    }
+}
+
+.pb-wrapper .finish-msg > h1 {
+    color: #02c8a7;
+    font-size: 7vw;
+    font-weight: bold;
+}
+
+.finish-msg > .play-again-btn {  
+   position: absolute;
+   bottom: 1vh;
+   left: 50%;
+   transform: translate(-50%,0);
+   width: 100%;
+
+   background-color:transparent;   
+   padding: 15px 20px;
+   border:0;
+
+   color: #02c8a7;
+   font-weight: bold;
+   font-size: 5vw;
+
+   transition: font-size .3s ease;
+}
+
+.finish-msg > .play-again-btn:hover, :focus {      
+    color: #f9be02;
+    font-size: 7vw;
+    outline: none;
+}
+
+.pb-wrapper.display-block {
+    display: block;
+
+    animation: showBoardAnim;
+    animation-duration: 1.7s;
+}
+
+.pb-wrapper .finish-msg.disp-block {
+    display: block;
+}
+
+@keyframes showBoardAnim {
+    0% {left: -10000px;}
+    100% {left: 0px;}
+}

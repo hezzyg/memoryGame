@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Boogaloo");
+
+* { 
+	box-sizing: border-box; 
+  color: #054754;
+  outline: none;
+}
+
+html, body {  
+  padding: 0;
+  margin: 0;
+  font-family: 'Boogaloo', cursive !important;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100vh;
+  width: 100vw;
+  background-color: #7DDCD4;  
+}
+
+.flex-box .top-bar {
+  order: 1;
+  text-align: center;
+}
+
+.flex-box .top-bar .main-title {
+  color: #054754;
+  font-size: 12vh;
+  font-weight: bolder;
+  text-shadow: 0px 0px 10px #02C8A7;
+  font-family: 'Libre Franklin', Arial, Helvetica, sans-serif sans-serif;
+  margin: 2vh 0;
+}
+
+@media screen and (max-width: 760px) { 
+    .flex-box .top-bar .main-title {
+        font-size: 13vw;
+    }
+}
+
+.flex-box .main-wrapper {
+  order: 2;
+  flex-grow: 100;
+  width: 100%;
+}
+
+.flex-box .main-wrapper .loading-msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+}

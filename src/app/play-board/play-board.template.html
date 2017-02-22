@@ -1,0 +1,19 @@
+<section class="pb-wrapper" [ngClass]="{'display-block' : showCards}">               
+    <h1>TRY TO FIND MATCING PAIRS</h1>
+    <h2 class="pairs-count">
+        FOUND: {{pairsFound}}/{{numOfCards}}
+    </h2>
+    <section class="board">
+        <div class="card-space" *ngFor="let card of cardsList"
+            [ngStyle]="{'height' : cardHeight, 'width' : cardWidth}">
+            <card [card]="card" (click)="pickCard(card)"></card>
+        </div>
+    </section>
+    
+    <!--finish game message-->
+    <div class="finish-msg"
+        [ngClass]="{'disp-block' : showMsg}">
+        <h1>Well Done !!!</h1>
+        <button class="btn play-again-btn" (click)="reload()">play again</button>
+    </div>    
+</section>

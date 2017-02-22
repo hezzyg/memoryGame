@@ -1,0 +1,10 @@
+<section class="flip-container" [ngClass]="{'flipped' : card.flipped}">
+  <div class="single-card">
+    <div class="front" [ngStyle]="{'border-size' : borderSize, 'border-radius' : border-radius}"></div>
+    <div class="back" [ngStyle]="{'border-size' : borderSize, 'border-radius' : border-radius}">
+      <p [ngStyle]="{'font-size' : fontSize}">
+        {{card.content}}
+      </p>
+    </div>
+  </div>
+</section>
